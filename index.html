@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Hola Mundo! - GitHub Pages</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 60px 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #333;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: slideIn 1s ease-out;
+        }
+
+        .emoji {
+            font-size: 4rem;
+            margin: 20px 0;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        p {
+            color: #666;
+            font-size: 1.2rem;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+
+        .info {
+            background: #f0f4ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+        }
+
+        .links {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        a {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        a:hover {
+            background: #764ba2;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .container {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="emoji">👋</div>
+        <h1>¡Hola Mundo!</h1>
+        
+        <p>Bienvenido a mi primera página web desplegada con <strong>GitHub Pages</strong></p>
+        
+        <div class="info">
+            <p><strong>🚀 Esta página se actualiza automáticamente</strong> cada vez que haces push a tu repositorio de GitHub.</p>
+        </div>
+
+        <p>Esta es una demostración de cómo automatizar el despliegue de contenido web usando:</p>
+        
+        <div class="info">
+            <p>✅ GitHub Repository<br>
+            ✅ GitHub Pages<br>
+            ✅ Integración automática (CI/CD)</p>
+        </div>
+
+        <div class="links">
+            <a href="https://github.com/bryanurieljonestineo0912-eng/Practica1-Crear-Repositorio-en-Github" target="_blank">📦 Ver Repositorio</a>
+            <a href="https://pages.github.com/" target="_blank">📖 Aprende GitHub Pages</a>
+        </div>
+
+        <div class="footer">
+            <p>Creado con ❤️ usando HTML, CSS y GitHub Pages</p>
+            <p>Última actualización: <span id="date"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // Mostrar la fecha actual
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        const today = new Date().toLocaleDateString('es-ES', options);
+        document.getElementById('date').textContent = today;
+    </script>
+</body>
+</html>
